@@ -13,7 +13,7 @@ const TokenomicsBlog = () => {
         />
         <meta name="keywords" content="Audit Smart AI, Tokenomics, Redacted Version" />
         <meta name="author" content="Audit Smart AI Team" />
-        <link rel="canonical" href="https://auditsmartai.xyz/blog/tokenomics" />
+        <link rel="canonical" href="#" />
       </Helmet>
 
       <h1 className="main-title glow-text">
