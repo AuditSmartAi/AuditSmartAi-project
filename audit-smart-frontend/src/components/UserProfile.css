@@ -1,0 +1,442 @@
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.profile-content {
+  background-color: #1e1e2d;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.profile-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2d2d3d;
+}
+
+.wallet-address h2 {
+  margin: 0;
+  color: #fff;
+}
+
+.wallet {
+  color: #aaa;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-btn {
+  background: #2d2d3d;
+  border: none;
+  color: #aaa;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #3d3d4d;
+  color: #fff;
+}
+
+.stats-summary {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6c5ce7;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.profile-sections {
+  margin-top: 1rem;
+}
+
+.profile-section {
+  margin-bottom: 1rem;
+  border: 1px solid #2d2d3d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile-section.expanded {
+  border-color: #6c5ce7;
+}
+
+.section-header {
+  padding: 1rem;
+  background-color: #2d2d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.section-content {
+  padding: 1rem;
+  background-color: #252535;
+}
+
+.audits-list, .deployments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.audit-item, .deployment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #2d2d3d;
+  border-radius: 6px;
+}
+
+.audit-info, .deployment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.audit-name, .deployment-name {
+  font-weight: bold;
+  color: #fff;
+}
+
+.audit-date, .deployment-date, .deployment-address {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.details-btn {
+  background: #6c5ce7;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.details-btn:hover {
+  background: #5d4acf;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.badge.completed {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.badge.failed {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.badge.pending {
+  background-color: #f39c12;
+  color: white;
+}
+
+.no-data {
+  color: #aaa;
+  text-align: center;
+  padding: 1rem;
+}
+
+.nfts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.nft-card {
+  background-color: #2d2d3d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nft-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.nft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nft-info {
+  padding: 0.8rem;
+}
+
+.nft-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.nft-id, .nft-date {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0.2rem 0;
+}
+
+.audit-details {
+  max-width: 800px;
+}
+
+.detail-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2d2d3d;
+}
+
+.detail-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.detail-label {
+  width: 150px;
+  color: #aaa;
+  font-weight: bold;
+}
+
+.detail-value {
+  color: #fff;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vulnerabilities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vulnerability-item {
+  background-color: #2d2d3d;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.vuln-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.vuln-severity {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.vuln-severity[data-severity="high"] {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.vuln-severity[data-severity="medium"] {
+  background-color: #f39c12;
+  color: white;
+}
+
+.vuln-severity[data-severity="low"] {
+  background-color: #3498db;
+  color: white;
+}
+
+.vuln-title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.vuln-description, .vuln-recommendation, .vuln-location {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.3rem;
+}
+
+.nft-preview {
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.nft-preview img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-btn {
+  background: #6c5ce7;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.primary-btn:hover {
+  background: #5d4acf;
+}
+
+.secondary-btn {
+  background: #2d2d3d;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.secondary-btn:hover {
+  background: #3d3d4d;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #6c5ce7;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: #e74c3c;
+  margin: 1rem 0;
+}
+
+.retry-btn {
+  background: #6c5ce7;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.retry-btn:hover {
+  background: #5d4acf;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .stats-summary {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nfts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .detail-label {
+    width: 100%;
+  }
+}

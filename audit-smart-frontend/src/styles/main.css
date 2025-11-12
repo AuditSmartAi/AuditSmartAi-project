@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  height: 100%;
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+:root {
+  --bg-dark: #0a0a12;
+  --bg-darker: #05050a;
+  --primary-gradient: linear-gradient(135deg, #6e48aa, #9d50bb);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --accent: #4cc9f0;
+  --card-bg: rgba(26, 26, 46, 0.6);
+  --star-filled: #ffd700;
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --disabled-bg: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.primary-btn {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background: rgba(76, 201, 240, 0.1);
+}
+/* Add these to your existing :root variables */
+:root {
+  --bg-dark: #0a0a12;
+  --bg-darker: #05050a;
+  --primary-gradient: linear-gradient(135deg, #6e48aa, #9d50bb);
+  --secondary-gradient: linear-gradient(135deg, #4cc9f0, #4361ee);
+  --text-primary: #ffffff;
+  --text-secondary: #b8b8b8;
+  --accent: #4cc9f0;
+  --card-bg: rgba(26, 26, 46, 0.6);
+  --border-radius: 12px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing */
+section {
+  padding: 6rem 0;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+* {
+  user-select: none;
+}
+
+/* ==================== */
+/* Scroll Animation Effects */
+/* ==================== */
+.scroll-effect {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-effect.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay classes for staggered animations */
+.scroll-effect.delay-1 {
+  transition-delay: 0.2s;
+}
+.scroll-effect.delay-2 {
+  transition-delay: 0.4s;
+}
+.scroll-effect.delay-3 {
+  transition-delay: 0.6s;
+}
+
+/* Specific animation types */
+.scroll-effect.fade-left {
+  transform: translateX(-30px);
+}
+.scroll-effect.fade-right {
+  transform: translateX(30px);
+}
+.scroll-effect.animate.fade-left,
+.scroll-effect.animate.fade-right {
+  transform: translateX(0);
+}
+
+/* Scale animation */
+.scroll-effect.scale {
+  transform: scale(0.95);
+}
+.scroll-effect.animate.scale {
+  transform: scale(1);
+}
+/* Performance optimizations */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Will-change for animated elements */
+.scroll-effect {
+  will-change: opacity, transform;
+}
+
+/* Hardware acceleration for smoother animations */
+.hero h1,
+.hero .subtitle,
+.cta-buttons {
+  transform: translateZ(0);
+}

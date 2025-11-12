@@ -1,0 +1,24 @@
+
+
+
+/* Add interactive elements that will trigger cursor change */
+a, button, .clickable {
+    position: relative;
+  }
+  
+  /* Pulse animation for clickable elements */
+  a:hover, button:hover, .clickable:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Special effect for gradient text */
+  .gradient-text:hover {
+    animation: gradientPulse 2s infinite;
+  }
+  
+  @keyframes gradientPulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+ 

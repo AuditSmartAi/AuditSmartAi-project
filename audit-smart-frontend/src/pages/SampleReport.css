@@ -1,0 +1,348 @@
+/* Base Styles */
+.blast-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  padding: 24px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
+}
+
+.blast-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.blast-header {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.blast-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.blast-title h1 {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blast-title-icon {
+  color: #fc00ff;
+}
+
+.blast-wallet-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a1a1ff;
+  font-size: 14px;
+}
+
+.blast-status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff9d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff9d;
+  animation: blast-pulse 2s infinite;
+}
+
+/* Loading State */
+.blast-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0;
+  color: #a1a1ff;
+}
+
+.blast-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #fc00ff;
+  border-radius: 50%;
+  animation: blast-spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+/* Empty State */
+.blast-empty-state {
+  text-align: center;
+  padding: 64px 0;
+  color: #a1a1ff;
+}
+
+/* Cards Grid */
+.blast-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.blast-card {
+  background: rgba(15, 12, 41, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.blast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.3);
+  border-color: rgba(124, 58, 237, 0.6);
+}
+
+/* Image Container */
+.blast-image-container {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blast-nft-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.blast-card:hover .blast-nft-image {
+  transform: scale(1.03);
+}
+
+.blast-placeholder-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(45deg, #302b63, #24243e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1a1ff;
+  border-radius: 12px;
+}
+
+/* Info Grid */
+.blast-info-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.blast-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.blast-info-row:last-child {
+  border-bottom: none;
+}
+
+.blast-info-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a1a1ff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blast-info-value {
+  font-size: 14px;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.blast-token-id {
+  background: rgba(124, 58, 237, 0.2);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.blast-address {
+  background: rgba(124, 58, 237, 0.2);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.blast-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #00dbde;
+  font-size: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.blast-link:hover {
+  color: #fc00ff;
+}
+
+.blast-date-value {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+/* Footer */
+.blast-footer {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.blast-stats-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 12, 41, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 24px;
+  padding: 12px 20px;
+  color: #e2e8f0;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blast-stats-icon {
+  color: #fc00ff;
+}
+
+/* Modal Styles */
+.blast-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}
+
+.blast-modal-content {
+  background: linear-gradient(145deg, #0f0c29, #302b63);
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 90%;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  border: 1px solid rgba(124, 58, 237, 0.5);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+}
+
+.blast-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #a1a1ff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.blast-modal-close:hover {
+  color: #fc00ff;
+}
+
+.blast-modal-left {
+  flex: 1;
+}
+
+.blast-modal-left h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.blast-modal-left p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.blast-modal-right {
+  flex: 1;
+  background: rgba(15, 12, 41, 0.5);
+  border-radius: 12px;
+  padding: 16px;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.blast-modal-right h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #a1a1ff;
+}
+
+.blast-attributes-list {
+  font-size: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.blast-attributes-list li {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+  padding-bottom: 4px;
+}
+
+.blast-attributes-list li strong {
+  color: #a1a1ff;
+}
+
+/* Animations */
+@keyframes blast-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes blast-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blast-modal-content {
+    flex-direction: column;
+  }
+  
+  .blast-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

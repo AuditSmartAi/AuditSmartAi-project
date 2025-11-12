@@ -1,0 +1,22 @@
+.sticky-audit-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(110, 72, 170, 0.5);
+    z-index: 1000;
+    transition: transform 0.2s;
+  }
+  
+  .sticky-audit-btn:hover {
+    transform: translateY(-2px);
+  }

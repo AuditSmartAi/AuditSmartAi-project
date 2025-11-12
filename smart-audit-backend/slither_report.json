@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "kill",
+            "source_mapping": {
+              "start": 121,
+              "length": 116,
+              "filename_relative": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+              "filename_absolute": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+              "filename_short": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+              "is_dependency": false,
+              "lines": [
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "UnprotectedSelfdestruct",
+                "source_mapping": {
+                  "start": 78,
+                  "length": 208,
+                  "filename_relative": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+                  "filename_absolute": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+                  "filename_short": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36,
+                    37
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "kill()"
+            }
+          }
+        ],
+        "description": "UnprotectedSelfdestruct.kill() (C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol#17-25) allows anyone to destruct the contract\n",
+        "markdown": "[UnprotectedSelfdestruct.kill()](C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol#L17-L25) allows anyone to destruct the contract\n",
+        "first_markdown_element": "C:/Users/DELL/AppData/Local/Temp/tmpybirbv3t.sol#L17-L25",
+        "id": "dca7f76bc483a4ba39986ddac1a8917eda8003df7d2f749df95d9a3acdc47a4f",
+        "check": "suicidal",
+        "impact": "High",
+        "confidence": "High"
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+2025-06-01 20:50:29,787 - app.main - INFO - Ensured directory exists: reports
+2025-06-01 20:50:29,787 - app.main - INFO - Ensured directory exists: contracts
+2025-06-01 20:50:29,788 - app.main - INFO - Ensured directory exists: logs
+2025-06-01 20:50:29,789 - app.main - INFO - Ensured directory exists: artifacts
+2025-06-01 20:50:29,792 - app.main - INFO - Audit Smart API service starting up
+2025-06-01 20:50:31,111 - app.main - INFO - Audit Smart API service shutting down

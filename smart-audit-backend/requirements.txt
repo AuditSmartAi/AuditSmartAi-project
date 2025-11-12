@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+web3
+py-solc-x
+python-multipart
+pymongo

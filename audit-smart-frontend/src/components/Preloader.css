@@ -1,0 +1,146 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-darker);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .preloader.fade-out {
+    opacity: 0;
+  }
+  
+  .preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .logo-spinner {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .logo-orbits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate 12s linear infinite;
+  }
+  
+  .orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    animation: orbit-pulse 4s ease-in-out infinite;
+  }
+  
+  .orbit-1 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top-color: var(--accent);
+    animation-delay: 0.1s;
+  }
+  
+  .orbit-2 {
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    bottom: 15%;
+    border-right-color: rgba(110, 72, 170, 0.8);
+    animation-delay: 0.3s;
+  }
+  
+  .orbit-3 {
+    top: 30%;
+    left: 30%;
+    right: 30%;
+    bottom: 30%;
+    border-bottom-color: rgba(157, 80, 187, 0.6);
+    animation-delay: 0.5s;
+  }
+  
+  .logo-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(110, 72, 170, 0.7);
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .progress-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-gradient);
+    transition: width 0.3s ease-out;
+    border-radius: 4px;
+  }
+  
+  .progress-text {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .status-text {
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 0;
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes orbit-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+  }

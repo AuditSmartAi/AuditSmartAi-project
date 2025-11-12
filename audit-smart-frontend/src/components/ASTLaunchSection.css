@@ -1,0 +1,225 @@
+/* AST Launch Section */
+.ast-launch-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+}
+
+.ast-launch-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.ast-launch-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ast-launch-header .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 25px;
+  color: #6ee7b7;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.ast-launch-header .badge .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+.ast-launch-header h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ast-launch-header p {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ast-launch-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .ast-launch-details {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.price-card {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  min-width: 250px;
+  text-align: center;
+}
+
+.price-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.token-name {
+  font-weight: 600;
+  color: #6ee7b7;
+}
+
+.price-change {
+  color: #6ee7b7;
+  font-weight: 600;
+}
+
+.price-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price-meta {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.ast-description {
+  flex: 1;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.ast-description p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.expand-btn, .collapse-btn {
+  background: transparent;
+  border: none;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.expand-btn:hover, .collapse-btn:hover {
+  text-decoration: underline;
+}
+
+.expanded-content {
+  margin-top: 1.5rem;
+}
+
+.expanded-content h4 {
+  color: #3b82f6;
+  margin-bottom: 1rem;
+}
+
+.expanded-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.expanded-content li {
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.ast-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+
+
+.trade-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  text-decoration: none;
+}
+
+.trade-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+}
+
+.learn-more {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+.tnc-disclaimer {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.tnc-link {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+.tnc-link:hover {
+  color: #60a5fa;
+}

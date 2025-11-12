@@ -1,0 +1,27 @@
+.cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.cursor.pointer {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.cursor-particle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Add this to ensure star ratings are clickable */
+.star-rating, .star-rating * {
+  pointer-events: auto !important;
+}

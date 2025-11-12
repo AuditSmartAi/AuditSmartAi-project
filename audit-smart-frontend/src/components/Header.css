@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* Header.css - Updated for left logo and right-aligned nav */
+:root {
+  --primary: #3B82F6;
+  --primary-dark: #2563EB;
+  --secondary: #8B5CF6;
+  --accent: #6366F1;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --bg-primary: #0F172A;
+  --bg-secondary: #1E293B;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header {
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Logo styles (left-aligned) */
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  transform: translateX(3px);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-primary);
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navigation styles (right-aligned) */
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav a.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* User Profile Styles */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1.5rem;
+}
+
+.profile-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  transition: var(--transition);
+}
+
+.profile-pic:hover {
+  border-color: var(--accent);
+}
+
+.profile-name {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-1px);
+}
+
+.logout-btn svg {
+  transition: var(--transition);
+}
+
+.logout-btn:hover svg {
+  transform: translateX(2px);
+}
+
+/* Google Sign-In Button */
+.google-signin-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  color: #1F2937;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.google-signin-btn:hover {
+  background: #F3F4F6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1001;
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-btn.open {
+  position: fixed;
+  right: 2rem;
+  top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-container.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav a {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .nav a:hover {
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .user-profile {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin: 1rem 0 0;
+  }
+
+  .profile-badge {
+    flex-direction: column;
+  }
+
+  .logout-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .google-signin-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Animation for mobile menu items */
+@media (max-width: 768px) {
+  .nav-container.open .nav a {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  .nav-container.open .nav a:nth-child(1) { animation-delay: 0.1s; }
+  .nav-container.open .nav a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-container.open .nav a:nth-child(3) { animation-delay: 0.3s; }
+  .nav-container.open .user-profile,
+  .nav-container.open .google-signin-btn { 
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Additional decorative elements */
+.header-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.header-decoration::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%);
+}
+
+.header-decoration::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 1.2;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .mobile-menu-btn {
+    padding: 0.25rem;
+  }
+
+  /* Add this to prevent the logo from taking too much space */
+  .logo {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  .span-txt{
+    font-size: 1.5rem;
+  }
+}
+.ai-txt{
+  color: cyan;
+}
+/* Add these new styles to your existing CSS */
+
+/* Logo pulse animation */
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Gradient button effects */
+.gradient-hover {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gradient-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+  background-size: 300% 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s, background-position 0.4s;
+}
+
+.gradient-hover:hover::before {
+  opacity: 1;
+  animation: gradientBG 3s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Connect wallet ripple effect */
+.connect-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple 1s linear;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Success animation */
+.success-animation {
+  animation: successPulse 0.6s ease;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* Disconnect animation */
+.disconnect-animation {
+  animation: disconnectShake 0.5s ease;
+}
+
+@keyframes disconnectShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+/* Glow effect for wallet address */
+.glow-on-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+  text-shadow: 0 0 8px rgba(139, 92, 246, 0.8);
+}
+
+/* Menu icon animation */
+.menu-icon-animate {
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn:hover .menu-icon-animate {
+  transform: rotate(15deg);
+}
+
+.mobile-menu-btn.open:hover .menu-icon-animate {
+  transform: rotate(-15deg);
+}
+
+/* Nav link hover effect */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Enhanced logo gradient */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: gradientText 5s ease infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Connect Wallet Button specific styles */
+.connect-wallet-btn {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.connect-wallet-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced mobile menu animations */
+@media (max-width: 768px) {
+  .nav.open a {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Staggered animation for nav items */
+  .nav.open a:nth-child(1) { animation-delay: 0.1s; }
+  .nav.open a:nth-child(2) { animation-delay: 0.2s; }
+  .nav.open a:nth-child(3) { animation-delay: 0.3s; }
+  .nav.open .user-profile,
+  .nav.open .connect-wallet-btn { 
+    animation-delay: 0.4s;
+  }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1001;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu-btn.open {
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.3s ease;
+    z-index: 1000;
+    display: flex;
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+  }
+
+  .wallet-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .connect-wallet-btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animation for mobile menu items */
+@media (max-width: 768px) {
+  .nav.open .nav-link {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .nav.open .nav-link:nth-child(1) { animation-delay: 0.1s; }
+  .nav.open .nav-link:nth-child(2) { animation-delay: 0.2s; }
+  .nav.open .nav-link:nth-child(3) { animation-delay: 0.3s; }
+  .nav.open .wallet-section { 
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
